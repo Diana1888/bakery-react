@@ -1,16 +1,16 @@
 import { useState } from "react";
-import { Gallery } from "./Gallery";
+import { gallery } from "./gallery";
 import next from "./next.png";
 import back from "./back.png"
 
 function Custom() {
     const [customCake, setCustomCake] = useState(0);
-    const {slide} = Gallery[customCake];
+    const {slide} = gallery[customCake];
 
     const nextSlide =() =>{
         setCustomCake(customCake =>{
             customCake++;
-            if(customCake > Gallery.length-1){
+            if(customCake > gallery.length-1){
                 customCake =0;
             }
             return customCake
@@ -21,7 +21,7 @@ function Custom() {
         setCustomCake(customCake => {
             customCake--;
             if(customCake < 0){
-                return Gallery.length -1;
+                return gallery.length -1;
             }
             return customCake;
         })

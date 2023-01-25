@@ -8,6 +8,7 @@ function Desserts({products}) {
         element.readMore = !element.readMore;
         setShowText(!showText)
     }
+    
     return(
         <div className="desserts">
             {products.map((element =>{

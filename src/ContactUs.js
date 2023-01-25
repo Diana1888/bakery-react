@@ -1,7 +1,7 @@
 import swal from 'sweetalert';
 
 function ContactUs() {
-    const onSubmit =(e) =>{
+    const onSubmitForm =(e) =>{
         e.preventDefault();
         swal("Your message was sent!", "Thank you!", "success");
     }
@@ -9,7 +9,7 @@ function ContactUs() {
     return(
         <div className="container contacts">
             <h1>Contact us</h1>
-            <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmitForm}>
                 <input className="input-text email" type="email" placeholder="Your email" required />
                 <textarea className="input-text message" type="text" placeholder="Your message" required/>
                 <button className="btn-form">Submit</button>
