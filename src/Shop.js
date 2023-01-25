@@ -14,18 +14,13 @@ function Shop() {
         setDesserts(newDessert);
     }
 
-
-
-
-
     return(
         <div>
         <div classname="container">
             <h1>All Products</h1>
         </div>
         <Buttons filteredDessert = {chosenDessert} alldesserts = {setDesserts}/>
-        <Desserts products = {desserts} />
-        
+        <Desserts products = {desserts} />   
         </div>
     )
 }
